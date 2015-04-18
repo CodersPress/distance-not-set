@@ -1,14 +1,44 @@
 <?php
 /*
 Plugin Name: Distance Not Set
-Plugin URI: http://coderspress.com/forum/miscellaneous-plugins/
+Plugin URI: http://coderspress.com/
 Description: This plugin replaces default miles/kilometers, if a users Location is not set.
 Version: 1.0.2
-Updated: 18th April 2015
+Updated: 19th April 2015
 Author: sMarty 
 Author URI: http://coderspress.com
 License:
 */
+
+add_action( 'init', 'github_plugin_updater_test_init' );
+function github_plugin_updater_test_init() {
+
+	include_once 'updater.php';
+
+	define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+		$config = array(
+			'slug' => plugin_basename( __FILE__ ),
+			'proper_folder_name' => 'distance-not-set',
+			'api_url' => 'https://api.github.com/repos/CodersPress/distance-not-set',
+			'raw_url' => 'https://raw.github.com/CodersPress/distance-not-set/master',
+			'github_url' => 'https://github.com/CodersPress/distance-not-set',
+			'zip_url' => 'https://github.com/CodersPress/distance-not-set/archive/master.zip',
+			'sslverify' => true,
+			'requires' => '3.8',
+			'tested' => '4.1',
+			'readme' => 'README.md',
+			'access_token' => '',
+		);
+
+		new WP_DNS_Updater( $config );
+
+	}
+
+}
+
 add_action('admin_menu', 'distance_menu');
 function distance_menu() {
 	add_menu_page('Distance NOT SET', 'Distance NOT SET', 'administrator', __FILE__, 'distance_setting_page',plugins_url('/images/navigation.png', __FILE__));
