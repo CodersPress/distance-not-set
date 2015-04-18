@@ -3,8 +3,8 @@
 Plugin Name: Distance Not Set
 Plugin URI: http://coderspress.com/forum/miscellaneous-plugins/
 Description: This plugin replaces default miles/kilometers, if a users Location is not set.
-Version: 1
-Updated: 6th October 2014
+Version: 1.0.2
+Updated: 18th April 2015
 Author: sMarty 
 Author URI: http://coderspress.com
 License:
