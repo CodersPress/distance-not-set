@@ -10,8 +10,8 @@ Author URI: http://coderspress.com
 License:
 */
 
-add_action( 'init', 'github_plugin_updater_test_init' );
-function github_plugin_updater_test_init() {
+add_action( 'init', 'dns_plugin_updater_init' );
+function dns_plugin_updater_init() {
 
 	include_once 'updater.php';
 
