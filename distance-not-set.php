@@ -33,8 +33,8 @@ function dns_plugin_updater_init() {
 			'access_token' => '',
 		);
 		new WP_DNS_Updater( $config );
-	}
-  }
+	    }
+    }
 }
 
 add_action('admin_menu', 'distance_menu');
