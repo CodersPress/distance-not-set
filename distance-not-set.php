@@ -13,7 +13,7 @@ License:
 add_action( 'init', 'dns_plugin_updater_init' );
 function dns_plugin_updater_init() {
 
-	include_once('updater.php');
+	require ( dirname( __FILE__ ) . '/updater.php' );
 
 	define( 'WP_DNS_FORCE_UPDATE', true );
 
