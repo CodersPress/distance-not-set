@@ -15,7 +15,7 @@ function dns_plugin_updater_init() {
 
 	include_once('updater.php');
 
-	define( 'WP_GITHUB_FORCE_UPDATE', true );
+	define( 'WP_DNS_FORCE_UPDATE', true );
 
 	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 		if ( is_admin() ) { 
