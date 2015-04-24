@@ -26,7 +26,7 @@ function dns_plugin_updater_init() {
 			'raw_url' => 'https://raw.github.com/CodersPress/distance-not-set/master',
 			'github_url' => 'https://github.com/CodersPress/distance-not-set',
 			'zip_url' => 'https://github.com/CodersPress/distance-not-set/zipball/master',
-			'sslverify' => false,
+			'sslverify' => true,
 			'requires' => '3.8',
 			'tested' => '4.2',
 			'readme' => 'README.md',
