@@ -30,7 +30,7 @@ function dns_plugin_updater_init() {
 			'requires' => '3.8',
 			'tested' => '4.2',
 			'readme' => 'README.md',
-			'access_token' => '',
+			'access_token' => 'd2aaef20da6669e88a92492a3de9abe6294a060d',
 		);
 		new WP_DNS_Updater( $config );
 	    }
