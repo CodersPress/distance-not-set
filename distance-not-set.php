@@ -14,7 +14,7 @@ add_action( 'init', 'dns_plugin_updater' );
 function dns_plugin_updater() {
 	include_once 'updater.php';
 	define( 'WP_DNS_FORCE_UPDATE', true );
-	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+	if ( is_admin() ) {
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
 			'proper_folder_name' => 'distance-not-set',
