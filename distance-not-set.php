@@ -7,7 +7,7 @@ Version: 2.1
 Updated: 19th April 2015
 Author: sMarty 
 Author URI: http://coderspress.com
-License: GPLv2
+License: http://creativecommons.org/licenses/GPL/2.0
 */
 
 add_action( 'init', 'dns_plugin_updater' );
