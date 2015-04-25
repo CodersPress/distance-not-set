@@ -17,7 +17,6 @@ function dns_plugin_updater() {
 
 	define( 'WP_DNS_FORCE_UPDATE', true );
 
-	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 		if ( is_admin() ) { 
 			$config = array(
 			'slug' => plugin_basename( __FILE__ ),
@@ -33,8 +32,7 @@ function dns_plugin_updater() {
 			'access_token' => 'f50960018d2e486215e6e62570a699640b2aaa25',
 		);
 		new WP_DNS_Updater( $config );
-	    }
-    }
+        }
 }
 
 add_action('admin_menu', 'distance_menu');
