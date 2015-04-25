@@ -12,29 +12,25 @@ License: http://creativecommons.org/licenses/GPL/2.0
 
 add_action( 'init', 'dns_plugin_updater' );
 function dns_plugin_updater() {
-
-	require ( dirname( __FILE__ ) . '/updater.php' );
-
+	include_once 'updater.php';
 	define( 'WP_DNS_FORCE_UPDATE', true );
-
-		if ( is_admin() ) { 
-			$config = array(
+	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
 			'proper_folder_name' => 'distance-not-set',
 			'api_url' => 'https://api.github.com/repos/CodersPress/distance-not-set',
 			'raw_url' => 'https://raw.github.com/CodersPress/distance-not-set/master',
 			'github_url' => 'https://github.com/CodersPress/distance-not-set',
-			'zip_url' => 'https://github.com/CodersPress/distance-not-set/zipball/master',
+			'zip_url' => 'https://github.com/CodersPress/distance-not-set/archive/master.zip',
 			'sslverify' => true,
-			'requires' => '3.8',
+			'requires' => '3.0',
 			'tested' => '4.2',
 			'readme' => 'README.md',
-			'access_token' => 'f50960018d2e486215e6e62570a699640b2aaa25',
+			'access_token' => '7f0082251a7b697a02d965d9a7b59fdf83d5e886',
 		);
 		new WP_DNS_Updater( $config );
-        }
+	}
 }
-
 add_action('admin_menu', 'distance_menu');
 function distance_menu() {
 	add_menu_page('Distance NOT SET', 'Distance NOT SET', 'administrator', __FILE__, 'distance_setting_page',plugins_url('/images/navigation.png', __FILE__));
