@@ -24,7 +24,7 @@ function dns_plugin_updater() {
 			'zip_url' => 'https://github.com/CodersPress/distance-not-set/zipball/master',
 			'sslverify' => true,
 			'requires' => '3.0',
-			'tested' => '4.2',
+			'tested' => '4.2.1',
 			'readme' => 'README.md',
 			'access_token' => '7f0082251a7b697a02d965d9a7b59fdf83d5e886',
 		);
