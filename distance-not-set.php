@@ -3,8 +3,8 @@
 Plugin Name: Distance Not Set
 Plugin URI: http://coderspress.com/
 Description: This plugin replaces default miles/kilometers, if a users Location is not set.
-Version: 2.0
-Updated: 28th April 2015
+Version: 2015.05.02
+Updated: 2nd May 2015
 Author: sMarty 
 Author URI: http://coderspress.com
 License: http://creativecommons.org/licenses/GPL/2.0
@@ -21,7 +21,7 @@ function dns_plugin_updater() {
 			'api_url' => 'https://api.github.com/repos/CodersPress/distance-not-set',
 			'raw_url' => 'https://raw.github.com/CodersPress/distance-not-set/master',
 			'github_url' => 'https://github.com/CodersPress/distance-not-set',
-			'zip_url' => 'https://github.com/CodersPress/distance-not-set/zipball/master',
+			'zip_url' => 'https://github.com/CodersPress/distance-not-set/archive/master.zip',
 			'sslverify' => true,
 			'requires' => '3.0',
 			'tested' => '4.2.1',
