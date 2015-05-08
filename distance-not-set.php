@@ -26,7 +26,7 @@ function dns_plugin_updater() {
 			'sslverify' => true,
 			'access_token' => '3095c026308a0202c54af7b923ace336b09547aa',
 		);
-		new WP_CP_UPDATER( $config );
+		new WP_DNS_UPDATER( $config );
 	}
 }
 add_action('admin_menu', 'distance_menu');
