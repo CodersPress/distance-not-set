@@ -120,7 +120,7 @@ class WP_DNS_UPDATER {
 			$this->config['zip_url'] = $zip_url;
 		}
 
-		$plugin_data = $this->get_plugin_data();
+				$plugin_data = $this->get_plugin_data();
 
 		if ( ! isset( $this->config['new_version'] ) )
 			$this->config['new_version'] = $this->get_new_version();
@@ -137,10 +137,10 @@ class WP_DNS_UPDATER {
 		if ( ! isset( $this->config['version'] ) )
 			$this->config['version'] = $plugin_data['Version'];
 
-		if ( ! isset( $this->config['version'] ) )
+		if ( ! isset( $this->config['requires'] ) )
 			$this->config['requires'] = $plugin_data['WP_Requires'];
 
-		if ( ! isset( $this->config['version'] ) )
+		if ( ! isset( $this->config['tested'] ) )
 			$this->config['tested'] = $plugin_data['WP_Compatible'];
 
 		if ( ! isset( $this->config['author'] ) )
