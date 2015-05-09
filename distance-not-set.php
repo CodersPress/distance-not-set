@@ -24,9 +24,6 @@ function dns_plugin_updater() {
 			'github_url' => 'https://github.com/CodersPress/distance-not-set',
 			'zip_url' => 'https://github.com/CodersPress/distance-not-set/zipball/master',
 			'sslverify' => true,
-			'requires' => '3.0',
-			'tested' => '4.2.2',
-			'readme' => 'README.md',
 			'access_token' => '3095c026308a0202c54af7b923ace336b09547aa',
 		);
 		new WP_DNS_UPDATER( $config );
