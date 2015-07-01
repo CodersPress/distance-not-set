@@ -3,8 +3,8 @@
 Plugin Name: Distance Not Set
 Plugin URI: http://coderspress.com/
 Description: This plugin replaces default miles/kilometers, if a users Location is not set.
-Version: 2015.0508
-Updated: 8th May 2015
+Version: 2015.0601
+Updated: 1st July 2015
 Author: sMarty 
 Author URI: http://coderspress.com
 WP_Requires: 3.8.1
@@ -100,7 +100,6 @@ echo '<div id="message" class="updated fade"><p><strong>Plugin settings saved.</
 function distance(){
 ?>
 <script type="text/javascript">
-jQuery('.modal-footer > form:nth-child(1)').attr("action", "");
 var latitude = "<?=$_SESSION['mylocation']['lat'];?>";
 if (latitude  === '') {
     jQuery(".wlt_shortcode_distance").replaceWith("<span class='wlt_shortcode_distance'><?php echo get_option("distance_message");?><a data-target='#MyLocationModal' data-toggle='modal' onclick='GMApMyLocation();' href='javascript:void(0);'> <i class='fa fa-refresh'  style='cursor:pointer;color:<?php echo get_option('distance_icon_color');?>;'></i></a></span>");
